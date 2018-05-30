@@ -1,0 +1,255 @@
+﻿<!doctype html>
+<html lang="en" style="background-color:rgb(54,58,75)">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>番茄自我介绍和程序说明</title>
+
+<script src="js/adapter.js"></script> <!--rem适配js-->
+
+<link rel="stylesheet" href="css/base.css"> <!--初始化文件-->
+<link rel="stylesheet" href="css/menu.css"> <!--主样式-->
+
+</head>
+<body>
+
+<div id="menu">
+
+    <!--显示菜单-->
+    <div id="open">
+        <div class="navH">
+            说明文档
+        </div>
+        <div class="navBox">
+            <ul>
+                <li>
+                    <h2 class="obtain">局域网贴吧<i></i></h2>
+                </li>
+                <li>
+                    <h2 class="obtain">月报周报日报自动统计<i></i></h2>
+                </li>
+                <li>
+                    <h2 class="obtain">单位招聘考试系统<i></i></h2>
+                </li>
+                <li>
+                    <h2 class="obtain">新媒体信息管理<i></i></h2>
+                </li>
+				<li>
+                    <h2 class="obtain">电话问卷调查<i></i></h2>
+                </li>
+                <li>
+                    <h2 class="obtain">各种我也记不清的<i></i></h2>
+                </li>
+				   <li>
+                  <h2 class="obtain">自我介绍<i></i></h2>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!--<script src="js/menu.js"></script> <!--控制js-->
+    <script type="text/javascript">
+            //获取所有li的节点
+            var list =  document.getElementsByTagName("li");
+            //给每个li绑定事件
+            for(var i = 0;i<list.length;i++){
+				if(i==0) {
+					list[i].onclick = function(){
+						document.getElementById("Postbar").style.display='block';
+						document.getElementById("AutoReport").style.display='none';
+						document.getElementById("Test").style.display='none';
+						document.getElementById("MultiManage").style.display='none';
+						document.getElementById("PhoneRES").style.display='none';
+						document.getElementById("Others").style.display='none';
+						document.getElementById("Musician").style.display='none';
+					}
+				}
+				if(i==1) {
+					list[i].onclick = function(){
+							document.getElementById("Postbar").style.display='none';
+						document.getElementById("AutoReport").style.display='block';
+						document.getElementById("Test").style.display='none';
+						document.getElementById("MultiManage").style.display='none';
+						document.getElementById("PhoneRES").style.display='none';
+						document.getElementById("Others").style.display='none';
+						document.getElementById("Musician").style.display='none';
+					}
+				}
+				if(i==2) {
+					list[i].onclick = function(){
+						document.getElementById("Postbar").style.display='none';
+						document.getElementById("AutoReport").style.display='none';
+						document.getElementById("Test").style.display='block';
+						document.getElementById("MultiManage").style.display='none';
+						document.getElementById("PhoneRES").style.display='none';
+						document.getElementById("Others").style.display='none';
+						document.getElementById("Musician").style.display='none';
+					}
+				}
+				if(i==3) {
+					list[i].onclick = function(){
+						document.getElementById("Postbar").style.display='none';
+						document.getElementById("AutoReport").style.display='none';
+						document.getElementById("Test").style.display='none';
+						document.getElementById("MultiManage").style.display='block';
+						document.getElementById("PhoneRES").style.display='none';
+						document.getElementById("Others").style.display='none';
+						document.getElementById("Musician").style.display='none';
+					}
+				}
+				if(i==4) {
+					list[i].onclick = function(){
+						document.getElementById("Postbar").style.display='none';
+						document.getElementById("AutoReport").style.display='none';
+						document.getElementById("Test").style.display='none';
+						document.getElementById("MultiManage").style.display='none';
+						document.getElementById("PhoneRES").style.display='block';
+						document.getElementById("Others").style.display='none';
+						document.getElementById("Musician").style.display='none';
+					}
+				}
+				if(i==5) {
+					list[i].onclick = function(){
+						document.getElementById("Postbar").style.display='none';
+						document.getElementById("AutoReport").style.display='none';
+						document.getElementById("Test").style.display='none';
+						document.getElementById("MultiManage").style.display='none';
+						document.getElementById("PhoneRES").style.display='none';
+						document.getElementById("Others").style.display='block';
+						document.getElementById("Musician").style.display='none';
+					}
+				}		
+				if(i==6) {
+					list[i].onclick = function(){
+						document.getElementById("Postbar").style.display='none';
+						document.getElementById("AutoReport").style.display='none';
+						document.getElementById("Test").style.display='none';
+						document.getElementById("MultiManage").style.display='none';
+						document.getElementById("PhoneRES").style.display='none';
+						document.getElementById("Others").style.display='none';
+						document.getElementById("Musician").style.display='block';
+					}
+				}					
+            }
+        </script>
+<div id="Postbar"  style="display: none;background-color:rgb(54,58,75);color:white">
+ <br><h1 style="text-align:center">一、	局域网贴吧</h1><br>
+	<p>&nbsp&nbsp&nbsp&nbsp 由于单位工作性质，只有少数电脑连接外网，大部分是内网，因此需要搭建一个交流平台。由于都是普通电脑且要求系统稳定性，最简单的在普通电脑搭建简易服务器运行普通论坛的方式不适合，因此直接通过局域网共享数据的方式实现了一个简易贴吧。包括贴吧最基本的功能，如发帖、回复、回复后自动变为最新的贴子，也包括了发送表情、共享文件、替换背景、屏幕截图、新消息提醒，头像设置、贴吧内容导出、更新检测等一系列功能。<br><br>
+
+	&nbsp&nbsp&nbsp&nbsp 贴子使用不同的文件夹，通过ini文件与rtf文件配合保存，但是无论是文件还是表情、图片，都不是内嵌在rtf文件中的，由于rtf特殊性，其实简单的复制黏贴就可以把图片保存在里面（以代码的形式），但因为rtf文件中嵌入图片会极大的增加文件体积，考虑到贴吧会有较多次的使用，这种内嵌的方式消耗资源和带宽都很严重，所以采用了一种文件代码替换的方式，发送文件或表情后，程序将自动分析，会将相关表情文件的代码以类似[_675_]的特殊字符表示，当程序载入贴子时，会将其中的特殊字符串转换为相应的表情或者图片。（现在回顾一下想到，其实算是实现了超级简单的超文本浏览器了吧）<br><br>
+
+	&nbsp&nbsp&nbsp&nbsp 图片轮播了，5秒一张，一共6张，每个图片都有介绍的~
+</p>
+<div id="PicContent"  style="text-align:center">
+	<script type="text/javascript">
+var curIndex=0;
+
+var timeInterval=5000;
+var arr=new Array();
+arr[0]="pic/postbar/1.png";
+arr[1]="pic/postbar/2.png";
+arr[2]="pic/postbar/3.png";
+arr[3]="pic/postbar/4.png";
+arr[4]="pic/postbar/5.png";
+arr[4]="pic/postbar/6.png";
+setInterval(changeImg,timeInterval);
+function changeImg()
+{
+    var obj=document.getElementById("obj");
+    if (curIndex==arr.length-1) 
+    {
+        curIndex=0;
+    }
+    else
+    {
+        curIndex+=1;
+    }
+    obj.src=arr[curIndex];
+}
+</script>
+<img id=obj src ="pic/postbar/1.png" width=670 height=497 border =0>
+</div>
+
+
+</div>
+<div id="AutoReport"  style="display: none;background-color:rgb(54,58,75);color:white">
+	<p><br><h1 style="text-align:center">二、	周报月报日报自动统计和生成系统（包含了多个子程序模块）</h1><br>
+&nbsp&nbsp&nbsp&nbsp 因为交互操作只有导入/导出文件，功能全依赖代码了，人机交互的操作不多，因此无界面截图介绍。而且...最终生成的周报日报等，也涉及了一些保密信息，不便展示...
+由于内网工单中的日、周、月报导出功能基本不可用，且内网系统不包含微博、微信等网络来源的信息，无法获得准确的信息，因此从内网工单系统中抓包得到post信息，通过post方式在vb中获取返回数据，然后对数据进行分析整理，最终导出ini格式的数据文件，该数据文件与微博、微信、又想的管理程序导出的数据文件可以通过导出模块整合到一起，最终生成doc格式的文档。<br><br>
+&nbsp&nbsp&nbsp&nbsp 
+里面最大的难点在于内网系统的接口并未提供，所有的post方式都是通过抓包分析得出的，且最终获取到的数据，也是服务器返回的网页源码的形式，还需要对该源码进行分析和整理得到所需要的数据。
+<br><br>
+&nbsp&nbsp&nbsp&nbsp 该文档涉及到各类数据数量，百分百，增速等，同时也涉及到了数据信息类别、数据量的排名等一些信息，最终导出的文档只需要改动文字部分内容，所有数据不需要人工修改。最终形成的doc文档，包括了表格+文字的形式，该程序实际实现了自动获取数据+自动计算以及表格填写等一系列功能。
+
+
+</p>
+</div>
+<div id="Test"  style="display: none;background-color:rgb(54,58,75);color:white">
+	<p><br><h1 style="text-align:center">三、考试系统（打字、录音）</h1><br>&nbsp&nbsp&nbsp&nbsp 用于单位招聘考试时使用的考试程序，在局域网内使用，打字完成后会自动将打字成绩和录音记录到服务器中，由工作人员通过另外的打分程序打分后，可以将最终的打字和录音成绩汇总。<br><br>
+	
+	&nbsp&nbsp&nbsp&nbsp 
+	<div style="text-align:center">
+	<img  src ="pic/test/1.png" width=600 height=400 border =0>
+	<img  src ="pic/test/2.png" width=342 height=264 border =0>
+	</div>
+	</p>
+</div>
+<div id="MultiManage"  style="display: none;background-color:rgb(54,58,75);color:white">
+	<br><h1 style="text-align:center">四、新媒体信息管理、供热管理等</h1><br>&nbsp&nbsp&nbsp&nbsp 包括了微博、微信、邮箱等各个渠道的信息管理以及供热信息管理，微博微信邮箱使用的管理软件相同，导出文件格式相同，图片中有简单介绍，供热信息管理可以通过关键词的形式筛选相关信息<br><br>
+	
+	&nbsp&nbsp&nbsp&nbsp 
+	<div style="text-align:center">
+	<img  src ="pic/multiman/1.png" width=600 height=400 border =0>
+	<img  src ="pic/wphone/1.png" width=579 height=476 border =0>
+	</div>
+</div>
+<div id="PhoneRES"  style="display: none;background-color:rgb(54,58,75);color:white">
+		<br><h1 style="text-align:center">五、电话问卷调查</h1><br>&nbsp&nbsp&nbsp&nbsp 
+		此问卷调查工具实际上借助于需要浏览器才能登录的内网系统，将其控件提取并在vb程序中加载（华为控件），借用内网系统的服务器进行拨打电话、保存录音，在此基础上加载问卷题目及内容进行问卷调查，由于后期没有在实际工作中用到，个人测试通过后没有进行进一步完善。<br><br>
+		&nbsp&nbsp&nbsp&nbsp 难点更多的在于如何借用服务器实现通话和录音保存等操作，当时研究了很久，华为手册跟抓包同时使用，虽然最终实现的代码很简单，但程序的实现并不算容易，相比较来讲，一个不需要同时具备电话功能的问卷系统很容易实现。
+	
+	&nbsp&nbsp&nbsp&nbsp 
+	<br>
+	<br>
+	<div style="text-align:center"><img  src ="pic/pres/1.png"  width=649 height=425 border =0></div>
+</div>
+<div id="Others"  style="display: none;background-color:rgb(54,58,75);color:white"><br>
+	<p>五、	绩效计算系统（包括巡检、考试、质检三个子模块，每日将相应模块的成绩录入，即可自动导出当日excel表格，每月/周也可导出相应的绩效表格）<br>
+六、	每日工作量统计-从内网系统导出的excel文件中读取数据生成ini文件与绩效计算系统配合。<br>
+七、	工单每日自动导出并发送。即post形式得到相应数据，分析后以txt文本的形式，通过qq自动发送给需要对接的人员<br>
+八、热点地图（未最终完成），以实现了县市区的实时点亮的算法，当最新信息中包含相应地点的关键词后，自动点亮当前位置。再细化乡镇的话主要是重复性的体力工作了，后期由于内网系统不稳定，没敢继续<br>
+九、班次统计-分析excel排班表，计算所有工作人员工时<br>
+十、	地名查询工具<br>
+十一、	导入内网系统的数据到sqlserver中（未最终完成，内网系统不稳定，没敢继续）<br>
+....除了上面这些单位里用的...再有的话，比较早的像很久很久前，用海洋大学吧的吧友头像做过连连看游戏（算法还是网上找的），为了在qt中读取中文ini手写过ini文件解析算法，再比如<a style="color:yellow" target="_blank" href="https://totomato.wodemo.com/down/467646/xiaohebytotomato.html">给一个学妹写过一个双拼练习的程序</a>，因为我没有苹果没法做ios应用，所以只能通过网页实现跨平台啦，还有就是之前为参加青啤微营销大赛做过一款叫青啤躲躲的游戏，包括安卓端和电脑端两个版本，如下图<br>
+<div style="text-align:center"><img  src ="pic/map/2.jpg"  width=649 height=350 border =0>
+<img  src ="pic/game/1.png"  width=649 height=400 border =0>
+</div>
+</p>
+</div>
+<div id="Musician"  style="background-color:rgb(54,58,75);color:white">
+	<p><br><h1 style="text-align:center">介绍一下自己</h1><br>
+	&nbsp&nbsp&nbsp&nbsp 1993年出生，2015年大学毕业，在山东科技大学泰山科技学院学的机械电子工程，目前在职，工作地点暂时觉得不方便透露啦，单位的主要工作虽然与计算机关系不大，但我目前基本上是负责单位的技术维护和新媒体工作。<br><br>&nbsp&nbsp&nbsp&nbsp 
+	目前能拿来就用的大概就是vb和qt了，对c语言也很熟悉，但是c语言本身不适合做项目，我本身学编程就是兴趣，是希望学了就用，而且都是现学现用的，基本上是边学边做，然后慢慢的就熟悉了，所以类似java、php、python这些，都接触过，也有基本的了解，但由于实际工作中用不到，我也没有动力去深入研究。<br><br>&nbsp&nbsp&nbsp&nbsp 
+	其实我对计算机感兴趣不仅限于编程，所有跟计算机有关系的内容我都感兴趣，包括但不限于各类软件，比如我还会一点儿photoshop，所以招聘信息里的网页美工可能会适合我，哈哈哈，然后我还会edius之类的视频剪辑软件，之前也有参加青啤微营销拍过微电影。然后是，各类音乐工作站、音频处理软件什么的，我会做音乐，就是写歌啊编曲啊这些，前段时间我还录了编曲教程传了B站，链接在这儿<a style="color:yellow" target="_blank" href="https://www.bilibili.com/video/av22809982">【番茄的音乐教室】</a>，虽然不专业，但是如果学校里也有类似的专业需要教电脑音乐或者音视频处理的话，好像...也挺适合我。（哈哈哈）<br><br>&nbsp&nbsp&nbsp&nbsp 
+	
+	大概就是这样子吧，下面放一下我最新的一首歌，以及我的网易音乐人和微博主页，点击图片跳转~，照片作品什么的都在上面了，如果您有兴趣听或者有兴趣看的话，哈哈哈。<br>&nbsp&nbsp&nbsp&nbsp 
+	<br>
+	
+	
+	<div style="text-align:center">
+	&nbsp&nbsp&nbsp&nbsp<a style="color:white" target="_blank" href="http://music.163.com/#/song?id=558561024"><img  src ="pic/pes/3.png"   alt="番茄-星座" border =0></a>	
+    
+	&nbsp&nbsp&nbsp&nbsp<a style="color:white" target="_blank" href="http://music.163.com/#/artist?id=1053219"><img  src ="pic/pes/2.png"  alt="网易音乐人主页" border =0></a>
+	
+	&nbsp&nbsp&nbsp&nbsp<a style="color:white" target="_blank" href="https://weibo.com/totomusic"><img  src ="pic/pes/1.png"   alt="微博主页" border =0></a>
+	
+</div>
+
+	
+	</p>
+</div>
+</body>
+</html>
